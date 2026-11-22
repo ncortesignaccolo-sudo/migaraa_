@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const waxSeal = document.getElementById('wax-seal');
   const parchmentWrapper = document.getElementById('parchment-wrapper');
   const instructionHint = document.getElementById('instruction-hint');
+  const instaFloatingBtn = document.getElementById('insta-floating-btn');
 
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
@@ -53,6 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       parchmentWrapper.classList.remove('closed');
       parchmentWrapper.classList.add('open');
+
+      // Mostrar el botón flotante poco después de que empiece a abrirse el pergamino
+      instaFloatingBtn.classList.remove('hidden');
+      setTimeout(() => {
+        instaFloatingBtn.classList.add('visible');
+      }, 900);
     }, 250);
   }
 
