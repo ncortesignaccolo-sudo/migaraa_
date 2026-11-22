@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Primer Mes Mi Amor ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Partículas flotantes de fondo -->
+  <div id="particles-container" aria-hidden="true"></div>
 
+  <!-- FASE 1: Pantalla de bienvenida -->
+  <main id="welcome-screen" class="screen active">
+    <div class="welcome-card">
+      <div class="heart-icon">❤️</div>
+      <h1 class="main-title">
+        FELIZ PRIMER MES MI AMOR, PREPARATE PARA VIVIR TODA LA VIDA CONMIGO, TE ADORO!!
+      </h1>
+      <button id="unlock-btn" class="glow-button">
+        <span>✨ Desbloquear regalo ✨</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- FASE 2: Pergamino interactivo -->
+  <section id="scroll-screen" class="screen hidden">
+    <p id="instruction-hint" class="hint-text">
+      Toca el sello en el centro para abrir el pergamino...
+    </p>
+
+    <div id="parchment-wrapper" class="parchment-wrapper closed">
+      <!-- Rodillo superior -->
+      <div class="scroll-roller top-roller">
+        <div class="roller-knob left"></div>
+        <div class="roller-knob right"></div>
+      </div>
+
+      <!-- Cuerpo desenrollable -->
+      <div id="parchment-body" class="parchment-body">
+        <!-- Sello de lacre en el centro -->
+        <button id="wax-seal" class="wax-seal" aria-label="Abrir pergamino">
+          <span class="seal-inner">♥</span>
+        </button>
+
+        <!-- Contenido interior -->
+        <div class="parchment-content">
+          <h2 class="letter-heading">Para el amor de mi vida</h2>
+          <p class="letter-sub">Un pedacito de lo que siento por ti...</p>
+
+          <!-- Foto de la carta escrita a mano (guarda tu foto como carta1.jpg en la misma carpeta) -->
+          <div class="handwritten-section">
+            <div class="photo-frame letter-frame" data-caption="Mi carta para ti ❤️">
+              <img src="carta1.jpg" alt="Carta escrita a mano" />
+            </div>
+          </div>
+
+          <p class="signature">De tu novio — Nahuel ❤️</p>
+        </div>
+      </div>
+
+      <!-- Rodillo inferior -->
+      <div class="scroll-roller bottom-roller">
+        <div class="roller-knob left"></div>
+        <div class="roller-knob right"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox para ampliar la carta al hacer clic -->
+  <div id="lightbox" class="lightbox hidden">
+    <button id="close-lightbox" class="close-lightbox" aria-label="Cerrar">&times;</button>
+    <img id="lightbox-img" src="" alt="Carta ampliada" />
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
